@@ -1,0 +1,20 @@
+{
+    "name": "WOCreation_bit",
+    "version": "0.0.0",
+    "description": "WOCreation_bit Expansion Board for Microbit",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "README.md",
+        "WOCreation_bit.blocks",
+        "WOCreation_bit.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "preferredEditor": "blocksprj",
+    "license": "MIT"
+}
