@@ -133,6 +133,7 @@ enum oledFont {
 
 //% icon="\uf26c"
 //% color="255" weight="90" block="OLED"
+//% groups='["Sensor", "OLED"]'
 
 namespace OLED {
 
@@ -170,7 +171,9 @@ namespace OLED {
         else
             return false;
     }
-
+	
+	
+    // List of Actuator for the Sensor blocks to use. 
     /**
      * 按键传感器
      * 
@@ -180,7 +183,8 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=100
     //% blockGap=15
-
+	//% color=160
+	//% group=Sensor
 	
     export function ButtonPress(pin: DigitalPin): boolean {
         if (!INITPIN) {
@@ -213,8 +217,10 @@ namespace OLED {
      */
     //% blockId=infrared_is_triggered block="Triggered the infrared proximity sensor by|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=9
+    //% weight=98
     //% blockGap=15
+	//% color=160
+	//% group=Sensor
     export function infraredIsTriggered(pin: DigitalPin): boolean{
         if (!INITPIN) {
             init_pin();
@@ -247,6 +253,8 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=98
     //% blockGap=15
+	//% color=160
+	//% group=Sensor
     export function soundIsTriggered(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
@@ -279,6 +287,8 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=97
     //% blockGap=15
+	//% color=160
+	//% group=Sensor
     export function TrackIsDark(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
@@ -311,6 +321,8 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=96
     //% blockGap=15
+	//% color=160
+	//% group=Sensor
     export function shockSensor(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
@@ -343,6 +355,8 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=95
     //% blockGap=15
+	//% color=160
+	//% group=Sensor
     export function getRfid(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
@@ -375,6 +389,8 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=94
     //% blockGap=15
+	//% color=160
+	//% group=Sensor
     export function fingerPrint(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
@@ -407,6 +423,8 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=93
     //% blockGap=15
+	//% color=160
+	//% group=Sensor
     export function HumanInfrared(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
@@ -439,7 +457,9 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=92
     //% blockGap=15
-    export function magneticSwitch(pin: DigitalPin): number {
+	//% color=160
+	//% group=Sensor
+    export function magneticSwitch(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
             INITPIN = true;
@@ -449,11 +469,22 @@ namespace OLED {
                 ledPinfree();
                 LEDFREE = true;
             }
-
+			
         }
-        return pins.digitalReadPin(pin);
-
+		let status = false;
+		
+		if (pins.digitalReadPin(pin)){
+			status = true;
+		}
+		else {
+			status = false;
+		}
+        return status;
     }
+
+
+
+
 
     /**
      * @param pin , eg: P0
