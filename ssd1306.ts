@@ -3,6 +3,41 @@
 namespace OLED {
 
 
+
+    let INITPIN = false;
+    let LEDFREE = false;
+
+
+    function init_pin(): void {
+        pins.setPull(DigitalPin.P0, PinPullMode.PullNone);
+        pins.setPull(DigitalPin.P1, PinPullMode.PullNone);
+        pins.setPull(DigitalPin.P2, PinPullMode.PullNone);
+        pins.setPull(DigitalPin.P8, PinPullMode.PullNone);
+    }
+
+    function ledPinfree(): void {
+
+        led.enable(false);
+        pins.setPull(DigitalPin.P3, PinPullMode.PullNone);
+        pins.setPull(DigitalPin.P4, PinPullMode.PullNone);
+        pins.setPull(DigitalPin.P6, PinPullMode.PullNone);
+        pins.setPull(DigitalPin.P7, PinPullMode.PullNone);
+        pins.setPull(DigitalPin.P9, PinPullMode.PullNone);
+        pins.setPull(DigitalPin.P10, PinPullMode.PullNone);
+
+
+    }
+
+    function ifledPin(pin: number): boolean {
+        if (DigitalPin.P3 || DigitalPin.P4 || DigitalPin.P6 || DigitalPin.P7
+            || DigitalPin.P9 || DigitalPin.P10) {
+            return true;
+        }
+        else
+            return false;
+    }
+
+
     /**
      * 按键传感器
      * 
@@ -27,6 +62,103 @@ namespace OLED {
 
     }
 
+
+    /**
+     * 
+     * 
+     */
+    //% blockId=read_digital block="bule:bit readDigital|%pin"
+    //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
+    //% weight=90
+    //% blockGap=15
+    export function readDigital(pin: DigitalPin): number {
+        if (!INITPIN) {
+            init_pin();
+            INITPIN = true;
+        }
+        if (ifledPin(pin)) {
+            if (!LEDFREE) {
+                ledPinfree();
+                LEDFREE = true;
+            }
+
+        }
+        return pins.digitalReadPin(pin);
+
+    }
+
+    /**
+     * 
+     * 
+     */
+    //% blockId=write_digital block="bule:bit writeDigital pin|%pin|to|%value"
+    //% value.min=0 value.max=1
+    //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
+    //% weight=89
+    //% blockGap=15
+    export function writeDigital(pin: DigitalPin, value: number): void {
+        if (!INITPIN) {
+            init_pin();
+            INITPIN = true;
+        }
+        if (ifledPin(pin)) {
+            if (!LEDFREE) {
+                ledPinfree();
+                LEDFREE = true;
+            }
+        }
+        return pins.digitalWritePin(pin, value);
+
+    }
+
+
+
+    /**
+       * read analog pin only pin0/1/2/3/4/10
+       * 
+       */
+    //% blockId=read_analog block="bule:bit read analog|%pin"
+    //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
+    //% weight=88
+    //% blockGap=15
+    export function readAnalog(pin: AnalogPin): number {
+        if (!INITPIN) {
+            init_pin();
+            INITPIN = true;
+        }
+        if (ifledPin(pin)) {
+            if (!LEDFREE) {
+                ledPinfree();
+                LEDFREE = true;
+            }
+
+        }
+        return pins.analogReadPin(pin);
+
+    }
+
+    /**
+     * 
+     * 
+     */
+    //% blockId=write_analog block="bule:bit writeAnalog pin|%pin|to|%value"
+    //% value.min=0 value.max=1023
+    //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
+    //% weight=87
+    //% blockGap=40
+    export function writeAnalog(pin: AnalogPin, value: number): void {
+        if (!INITPIN) {
+            init_pin();
+            INITPIN = true;
+        }
+        if (ifledPin(pin)) {
+            if (!LEDFREE) {
+                ledPinfree();
+                LEDFREE = true;
+            }
+        }
+        return pins.analogWritePin(pin, value);
+    }
 
 
 

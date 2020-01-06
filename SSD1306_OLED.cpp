@@ -1,5 +1,6 @@
 #include "pxt.h"
 #include "Adafruit_SSD1306.h"
+#include <math.h>
 using namespace pxt;
 
 namespace OLED {
