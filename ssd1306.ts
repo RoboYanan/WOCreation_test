@@ -192,9 +192,18 @@ namespace OLED {
                 ledPinfree();
                 LEDFREE = true;
             }
-
+			
         }
-        return true;
+		let status = false;
+		
+		if (pins.digitalReadPin(pin)){
+			status = true;
+		}
+		else {
+			status = false;
+		}
+        return status;
+
 
     }
 
