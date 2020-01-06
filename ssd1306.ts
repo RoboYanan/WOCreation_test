@@ -178,7 +178,7 @@ namespace OLED {
 
     //% blockId=Button_Press block="ButtonPress by|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=90
+    //% weight=100
     //% blockGap=15
 
 	
@@ -213,9 +213,9 @@ namespace OLED {
      */
     //% blockId=infrared_is_triggered block="Triggered the infrared proximity sensor by|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=90
+    //% weight=9
     //% blockGap=15
-    export function infraredIsTriggered(pin: DigitalPin): number {
+    export function infraredIsTriggered(pin: DigitalPin): boolean{
         if (!INITPIN) {
             init_pin();
             INITPIN = true;
@@ -225,9 +225,17 @@ namespace OLED {
                 ledPinfree();
                 LEDFREE = true;
             }
-
+			
         }
-        return pins.digitalReadPin(pin);
+		let status = false;
+		
+		if (pins.digitalReadPin(pin)){
+			status = true;
+		}
+		else {
+			status = false;
+		}
+        return status;
 
     }
 
@@ -237,9 +245,9 @@ namespace OLED {
      */
     //% blockId=sound_is_triggered block="sound sensor is triggered in|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=90
+    //% weight=98
     //% blockGap=15
-    export function soundIsTriggered(pin: DigitalPin): number {
+    export function soundIsTriggered(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
             INITPIN = true;
@@ -249,9 +257,17 @@ namespace OLED {
                 ledPinfree();
                 LEDFREE = true;
             }
-
+			
         }
-        return pins.digitalReadPin(pin);
+		let status = false;
+		
+		if (pins.digitalReadPin(pin)){
+			status = true;
+		}
+		else {
+			status = false;
+		}
+        return status;
 
     }
 
@@ -261,9 +277,9 @@ namespace OLED {
      */
     //% blockId=Track_is_Dark block="Track sensor detected black in|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=90
+    //% weight=97
     //% blockGap=15
-    export function TrackIsDark(pin: DigitalPin): number {
+    export function TrackIsDark(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
             INITPIN = true;
@@ -273,9 +289,17 @@ namespace OLED {
                 ledPinfree();
                 LEDFREE = true;
             }
-
+			
         }
-        return pins.digitalReadPin(pin);
+		let status = false;
+		
+		if (pins.digitalReadPin(pin)){
+			status = true;
+		}
+		else {
+			status = false;
+		}
+        return status;
 
     }
 
@@ -285,9 +309,9 @@ namespace OLED {
      */
     //% blockId=shockSensor_is_Triggered block="Shock Sensor is triggered in|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=90
+    //% weight=96
     //% blockGap=15
-    export function shockSensor(pin: DigitalPin): number {
+    export function shockSensor(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
             INITPIN = true;
@@ -297,9 +321,17 @@ namespace OLED {
                 ledPinfree();
                 LEDFREE = true;
             }
-
+			
         }
-        return pins.digitalReadPin(pin);
+		let status = false;
+		
+		if (pins.digitalReadPin(pin)){
+			status = true;
+		}
+		else {
+			status = false;
+		}
+        return status;
 
     }
 
@@ -309,9 +341,9 @@ namespace OLED {
      */
     //% blockId=get_Rfid block="Get the Rfid in|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=90
+    //% weight=95
     //% blockGap=15
-    export function getRfid(pin: DigitalPin): number {
+    export function getRfid(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
             INITPIN = true;
@@ -321,9 +353,17 @@ namespace OLED {
                 ledPinfree();
                 LEDFREE = true;
             }
-
+			
         }
-        return pins.digitalReadPin(pin);
+		let status = false;
+		
+		if (pins.digitalReadPin(pin)){
+			status = true;
+		}
+		else {
+			status = false;
+		}
+        return status;
 
     }
 
@@ -333,9 +373,9 @@ namespace OLED {
      */
     //% blockId=finger_Print block="Fingerprint verification passed in|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=90
+    //% weight=94
     //% blockGap=15
-    export function fingerPrint(pin: DigitalPin): number {
+    export function fingerPrint(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
             INITPIN = true;
@@ -345,9 +385,17 @@ namespace OLED {
                 ledPinfree();
                 LEDFREE = true;
             }
-
+			
         }
-        return pins.digitalReadPin(pin);
+		let status = false;
+		
+		if (pins.digitalReadPin(pin)){
+			status = true;
+		}
+		else {
+			status = false;
+		}
+        return status;
 
     }
 
@@ -357,9 +405,9 @@ namespace OLED {
      */
     //% blockId=Human_Infrared block="Human Infrared sensor is triggered in|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=90
+    //% weight=93
     //% blockGap=15
-    export function HumanInfrared(pin: DigitalPin): number {
+    export function HumanInfrared(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
             INITPIN = true;
@@ -369,9 +417,17 @@ namespace OLED {
                 ledPinfree();
                 LEDFREE = true;
             }
-
+			
         }
-        return pins.digitalReadPin(pin);
+		let status = false;
+		
+		if (pins.digitalReadPin(pin)){
+			status = true;
+		}
+		else {
+			status = false;
+		}
+        return status;
 
     }
 
@@ -381,7 +437,7 @@ namespace OLED {
      */
     //% blockId=magnetic_Switch block="Magnetic switch is triggered in|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=90
+    //% weight=92
     //% blockGap=15
     export function magneticSwitch(pin: DigitalPin): number {
         if (!INITPIN) {
@@ -406,7 +462,7 @@ namespace OLED {
     //% blockId=usbSwitch block="In|%pin|USB switch ON_OFF|%value"
     //% value.min=0 value.max=1
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=89
+    //% weight=91
     //% blockGap=15
     export function usbSwitch(pin: DigitalPin, value: number): void {
         if (!INITPIN) {
@@ -429,7 +485,7 @@ namespace OLED {
     //% blockId=FanSwitch block="In|%pin|Fan switch ON_OFF|%value"
     //% value.min=0 value.max=1
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=89
+    //% weight=90
     //% blockGap=15
     export function FanSwitch(pin: DigitalPin, value: number): void {
         if (!INITPIN) {
@@ -478,7 +534,7 @@ namespace OLED {
     //% status.fieldEditor="gridpicker" status.fieldOptions.columns=3 status.fieldOptions.width="300" 
     //% rec.fieldEditor="gridpicker" rec.fieldOptions.columns=3 rec.fieldOptions.width="300" 
     //% play.fieldEditor="gridpicker" play.fieldOptions.columns=3 play.fieldOptions.width="300" 
-    //% weight=58
+    //% weight=88
     //% blockGap=15
     export function Rec_or_Play(status: Rec_Play, rec: DigitalPin, play: DigitalPin): void {
         //import { writeDigital } from "./WOCreation";
@@ -534,7 +590,7 @@ namespace OLED {
     //% speed.min=0 speed.max=1023
     //% ain1.fieldEditor="gridpicker" ain1.fieldOptions.columns=3 ain1.fieldOptions.width="300" 
     //% ain2.fieldEditor="gridpicker" ain2.fieldOptions.columns=3 ain2.fieldOptions.width="300" 
-    //% weight=30
+    //% weight=86
     //% blockGap=15
     export function Motor_on_off(status: motor_status, speed: number, ain1: AnalogPin, ain2: AnalogPin): void {
         if (status == 2) {                          //停止
@@ -558,7 +614,7 @@ namespace OLED {
      */
     //% blockId=water_level block="Values of water level sensors in|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=88
+    //% weight=85
     //% blockGap=15
     export function water_level(pin: AnalogPin): number {
         if (!INITPIN) {
@@ -580,7 +636,7 @@ namespace OLED {
      */
     //% blockId=Rotational_sensors block="Values of rotational potentiometer in|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=88
+    //% weight=84
     //% blockGap=15
     export function Rotational_sensors(pin: AnalogPin): number {
         if (!INITPIN) {
@@ -601,7 +657,7 @@ namespace OLED {
      */
     //% blockId= sound_sensors block="Values of sound sensor in|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=88
+    //% weight=83
     //% blockGap=15
     export function sound_sensors(pin: AnalogPin): number {
         if (!INITPIN) {
@@ -622,7 +678,7 @@ namespace OLED {
      */
     //% blockId= soil_moisture_sensor block="Values of soil moisture sensor in|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=88
+    //% weight=82
     //% blockGap=15
     export function soil_moisture_sensor(pin: AnalogPin): number {
         if (!INITPIN) {
@@ -643,7 +699,7 @@ namespace OLED {
      */
     //% blockId= Analog_ray_sensor  block="Values of Analog ray sensor in|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=88
+    //% weight=81
     //% blockGap=15
     export function Analog_ray_sensor(pin: AnalogPin): number {
         if (!INITPIN) {
@@ -669,7 +725,7 @@ namespace OLED {
     //% axis.fieldEditor="gridpicker" axis.fieldOptions.columns=3 axis.fieldOptions.width="300" 
     //% A0.fieldEditor="gridpicker" A0.fieldOptions.columns=3 A0.fieldOptions.width="300" 
     //% A1.fieldEditor="gridpicker" A1.fieldOptions.columns=3 A1.fieldOptions.width="300" 
-    //% weight=58
+    //% weight=80
     //% blockGap=15
     export function Rocker_sensor(axis: Rocker_axis, A0: AnalogPin, A1: AnalogPin): void {
 
@@ -688,7 +744,7 @@ namespace OLED {
      */
     //% blockId=read_digital block="WOCreation:bit readDigital|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=90
+    //% weight=79
     //% blockGap=15
     export function readDigital(pin: DigitalPin): number {
         if (!INITPIN) {
@@ -713,7 +769,7 @@ namespace OLED {
     //% blockId=write_digital block="WOCreation:bit writeDigital pin|%pin|to|%value"
     //% value.min=0 value.max=1
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=89
+    //% weight=78
     //% blockGap=15
     export function writeDigital(pin: DigitalPin, value: number): void {
         if (!INITPIN) {
@@ -738,7 +794,7 @@ namespace OLED {
        */
     //% blockId=read_analog block="WOCreation:bit read analog|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=88
+    //% weight=77
     //% blockGap=15
     export function readAnalog(pin: AnalogPin): number {
         if (!INITPIN) {
@@ -763,7 +819,7 @@ namespace OLED {
     //% blockId=write_analog block="WOCreation:bit writeAnalog pin|%pin|to|%value"
     //% value.min=0 value.max=1023
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=87
+    //% weight=76
     //% blockGap=40
     export function writeAnalog(pin: AnalogPin, value: number): void {
         if (!INITPIN) {
@@ -792,7 +848,7 @@ namespace OLED {
        */
     //% blockId=getNTC block="get NTCTemp|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
-    //% weight=85
+    //% weight=75
     //% blockGap=15
     export function getNTC(pin: AnalogPin): number {
         return _getNTC(readAnalog(pin));
@@ -806,7 +862,7 @@ namespace OLED {
     //% blockId=joyButtonVal block="joyButton|%button|is pressed|pin|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% button.fieldEditor="gridpicker" button.fieldOptions.width=300  button.fieldOptions.columns=2
-    //% weight=84
+    //% weight=74
     //% blockGap=15
     export function joyButtonVal(button: joyButton, pin: AnalogPin): boolean {
         if (!INITPIN) {
@@ -857,7 +913,7 @@ namespace OLED {
      * @param height height (in pixels)
      * @param width width (in pixels)
      */
-    //% weight=100
+    //% weight=73
     //% blockId=oled_init_terminal
     //% block="initialize OLED with height %height|width %width"
     //% icon="\uf1ec" 
@@ -869,7 +925,7 @@ namespace OLED {
     /**
      * 清除OLED屏幕
      */
-    //% weight=99
+    //% weight=72
     //% blockId=oled_clear_screen
     //% block="clear OLED display"
     //% icon="\uf1ec" 
@@ -882,7 +938,7 @@ namespace OLED {
      * 在OLED显示器上打印字符串
      * @param text text to display
      */
-    //% weight=98 blockGap=8
+    //% weight=71 blockGap=8
     //% block="show|string %text" 
     //% async
     //% blockId=oled_print_string
@@ -897,7 +953,7 @@ namespace OLED {
      * 在OLED显示器上打印数字
      * @param number number to display
      */
-    //% weight=97
+    //% weight=70
     //% blockId=oled_print_number
     //% block="show|number %number" blockGap=8
     //% async 
@@ -912,7 +968,7 @@ namespace OLED {
      * 在OLED显示器上启用画图显示或者关闭画图显示
      * @param onOffDisplay onOffDisplay to on or off display
      */
-    //% weight=96
+    //% weight=69
     //% blockId=oled_onOffDisplay
     //% block="show|onOff %onOff" blockGap=8
     //% async 
@@ -928,7 +984,7 @@ namespace OLED {
      * @param y y (in pixels)
      * @param r r (in pixels)
      */
-    //% weight=95
+    //% weight=68
     //% blockId=oled_drawCircle
     //% block="draw circle with x %x|y %y|r %r"
     //% icon="\uf1ec" 
@@ -943,7 +999,7 @@ namespace OLED {
      * @param y y (in pixels)
      * @param r r (in pixels)
      */
-    //% weight=94
+    //% weight=67
     //% blockId=oled_fillCircle
     //% block="fill circle with x %x|y %y|r %r"
     //% icon="\uf1ec" 
@@ -959,7 +1015,7 @@ namespace OLED {
      * @param x1 x1 (in pixels)
      * @param y1 y1 (in pixels)
      */
-    //% weight=93
+    //% weight=66
     //% blockId=oled_drawLine
     //% block="draw line with x0 %x0|y0 %y0|x1 %x1|y1 %y1"
     //% icon="\uf1ec" 
@@ -975,7 +1031,7 @@ namespace OLED {
      * @param w w (in pixels)
      * @param h h (in pixels)
      */
-    //% weight=92
+    //% weight=65
     //% blockId=oled_drawRect
     //% block="draw rect with x %x|y %y|w %w|h %h"
     //% icon="\uf1ec" 
@@ -991,7 +1047,7 @@ namespace OLED {
      * @param w w (in pixels)
      * @param h h (in pixels)
      */
-    //% weight=91
+    //% weight=64
     //% blockId=oled_fillRect
     //% block="fill rect with x %x|y %y|w %w|h %h"
     //% icon="\uf1ec" 
@@ -1008,7 +1064,7 @@ namespace OLED {
      * @param h h (in pixels)
      * @param r r (in pixels)
      */
-    //% weight=90
+    //% weight=63
     //% blockId=oled_drawRoundRect
     //% block="draw round rect with x %x|y %y|w %w|h %h|r %r"
     //% icon="\uf1ec" 
@@ -1025,7 +1081,7 @@ namespace OLED {
      * @param h h (in pixels)
      * @param r r (in pixels)
      */
-    //% weight=89
+    //% weight=62
     //% blockId=oled_fillRoundRect
     //% block="fill round rect with x %x|y %y|w %w|h %h|r %r"
     //% icon="\uf1ec" 
@@ -1043,7 +1099,7 @@ namespace OLED {
      * @param x2 x2 (in pixels)
      * @param y2 y2 (in pixels)
      */
-    //% weight=88
+    //% weight=61
     //% blockId=oled_drawTriangle
     //% block="draw triangle with x0 %x0|y0 %y0|x1 %x1|y1 %y1|x2 %x2|y2 %y2"
     //% icon="\uf1ec" 
@@ -1061,7 +1117,7 @@ namespace OLED {
      * @param x2 x2 (in pixels)
      * @param y2 y2 (in pixels)
      */
-    //% weight=87
+    //% weight=60
     //% blockId=oled_fillTriangle
     //% block="fill triangle with x0 %x0|y0 %y0|x1 %x1|y1 %y1|x2 %x2|y2 %y2"
     //% icon="\uf1ec" 
