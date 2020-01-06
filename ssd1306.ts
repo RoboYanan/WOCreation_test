@@ -175,14 +175,14 @@ namespace OLED {
      * 按键传感器
      * 
      */
-	//% block="square $x"
+
     //% blockId=Button_Press block="ButtonPress by|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=90
     //% blockGap=15
 
 	
-    export function ButtonPress(pin: DigitalPin): number {
+    export function ButtonPress(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
             INITPIN = true;
@@ -194,7 +194,7 @@ namespace OLED {
             }
 
         }
-        return pins.digitalReadPin(pin);
+        return true;
 
     }
 
