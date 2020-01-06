@@ -133,7 +133,7 @@ enum oledFont {
 
 //% icon="\uf26c"
 //% color="255" weight="90" block="OLED"
-//% groups='["Sensor", "OLED"]'
+//% groups='["Sensor", "OLED显示器"]'
 
 namespace OLED {
 
@@ -174,6 +174,7 @@ namespace OLED {
 	
 	
     // List of Actuator for the Sensor blocks to use. 
+	// List of Actuator for the OLED blocks to use. 
     /**
      * 按键传感器
      * 
@@ -937,7 +938,7 @@ namespace OLED {
 
 
 
-    // List of Actuator for the OLED blocks to use. 
+
 
     /**
      * 初始化i2c OLED显示器
@@ -949,7 +950,7 @@ namespace OLED {
     //% block="initialize OLED with height %height|width %width"
     //% icon="\uf1ec" 
     //% shim=OLED::init_terminal
-	//% group=OLED
+	//% group=OLED显示器
     export function init(height: number = 64, width: number = 128): void {
         return;
     }
@@ -962,7 +963,7 @@ namespace OLED {
     //% block="clear OLED display"
     //% icon="\uf1ec" 
     //% shim=OLED::clearDisplay
-	//% group=OLED
+	//% group=OLED显示器
     export function clear(): void {
         return;
     }
@@ -977,7 +978,7 @@ namespace OLED {
     //% blockId=oled_print_string
     //% icon="\uf1ec"
     //% shim=OLED::showString
-	//% group=OLED
+	//% group=OLED显示器
     export function showString(text: string): void {
         console.log("display: " + text);
         return;
@@ -992,7 +993,7 @@ namespace OLED {
     //% block="show|number %number" blockGap=8
     //% async 
     //% shim=OLED::showNumber
-	//% group=OLED
+	//% group=OLED显示器
     export function showNumber(number: number): void {
         console.log("display: " + number);
         return;
@@ -1008,7 +1009,7 @@ namespace OLED {
     //% block="show|onOff %onOff" blockGap=8
     //% async 
     //% shim=OLED::onOffDisplay
-	//% group=OLED
+	//% group=OLED显示器
     export function onOffDisplay(onOff: boolean = true): void {
         console.log("display: " + onOff );
         return;
@@ -1025,7 +1026,7 @@ namespace OLED {
     //% block="draw circle with x %x|y %y|r %r"
     //% icon="\uf1ec" 
     //% shim=OLED::drawCircle
-	//% group=OLED
+	//% group=OLED显示器
     export function drawCircle(x: number = 6, y: number = 6, r: number = 3): void {
         return;
     }
@@ -1041,7 +1042,7 @@ namespace OLED {
     //% block="fill circle with x %x|y %y|r %r"
     //% icon="\uf1ec" 
     //% shim=OLED::fillCircle
-	//% group=OLED
+	//% group=OLED显示器
     export function fillCircle(x: number = 6, y: number = 6, r: number = 3): void {
         return;
     }
@@ -1058,7 +1059,7 @@ namespace OLED {
     //% block="draw line with x0 %x0|y0 %y0|x1 %x1|y1 %y1"
     //% icon="\uf1ec" 
     //% shim=OLED::drawLine
-	//% group=OLED
+	//% group=OLED显示器
     export function drawLine(x0: number = 1, y0: number = 1, x1: number = 3, y1: number = 3): void {
         return;
     }
@@ -1075,7 +1076,7 @@ namespace OLED {
     //% block="draw rect with x %x|y %y|w %w|h %h"
     //% icon="\uf1ec" 
     //% shim=OLED::drawRect
-	//% group=OLED
+	//% group=OLED显示器
     export function drawRect(x: number = 1, y: number = 1, w: number = 3, h: number = 3): void {
         return;
     }
@@ -1092,7 +1093,7 @@ namespace OLED {
     //% block="fill rect with x %x|y %y|w %w|h %h"
     //% icon="\uf1ec" 
     //% shim=OLED::fillRect
-	//% group=OLED
+	//% group=OLED显示器
     export function fillRect(x: number = 1, y: number = 1, w: number = 3, h: number = 3): void {
         return;
     }
@@ -1110,7 +1111,7 @@ namespace OLED {
     //% block="draw round rect with x %x|y %y|w %w|h %h|r %r"
     //% icon="\uf1ec" 
     //% shim=OLED::drawRoundRect
-	//% group=OLED
+	//% group=OLED显示器
     export function drawRoundRect(x: number = 1, y: number = 1, w: number = 3, h: number = 3, r: number = 2): void {
         return;
     }
@@ -1128,7 +1129,7 @@ namespace OLED {
     //% block="fill round rect with x %x|y %y|w %w|h %h|r %r"
     //% icon="\uf1ec" 
     //% shim=OLED::fillRoundRect
-	//% group=OLED
+	//% group=OLED显示器
     export function fillRoundRect(x: number = 1, y: number = 1, w: number = 3, h: number = 3, r: number = 2): void {
         return;
     }
@@ -1147,7 +1148,7 @@ namespace OLED {
     //% block="draw triangle with x0 %x0|y0 %y0|x1 %x1|y1 %y1|x2 %x2|y2 %y2"
     //% icon="\uf1ec" 
     //% shim=OLED::drawTriangle
-	//% group=OLED
+	//% group=OLED显示器
     export function drawTriangle(x0: number = 1, y0: number = 1, x1: number = 3, y1: number = 3, x2: number = 1, y2: number = 3): void {
         return;
     }
@@ -1166,7 +1167,7 @@ namespace OLED {
     //% block="fill triangle with x0 %x0|y0 %y0|x1 %x1|y1 %y1|x2 %x2|y2 %y2"
     //% icon="\uf1ec" 
     //% shim=OLED::fillTriangle
-	//% group=OLED
+	//% group=OLED显示器
     export function fillTriangle(x0: number = 1, y0: number = 1, x1: number = 3, y1: number = 3, x2: number = 1, y2: number = 3): void {
         return;
     }
