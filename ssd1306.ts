@@ -2,6 +2,49 @@
 //% color="255" weight="90" block="OLED"
 namespace OLED {
 
+
+    /**
+     * 按键传感器
+     * 
+     */
+    //% blockId=Button_Press block="ButtonPress by|%pin"
+    //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
+    //% weight=90
+    //% blockGap=15
+    export function ButtonPress(pin: DigitalPin): number {
+        if (!INITPIN) {
+            init_pin();
+            INITPIN = true;
+        }
+        if (ifledPin(pin)) {
+            if (!LEDFREE) {
+                ledPinfree();
+                LEDFREE = true;
+            }
+
+        }
+        return pins.digitalReadPin(pin);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /**
      * 初始化i2c OLED显示器
      * @param height height (in pixels)
