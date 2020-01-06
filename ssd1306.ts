@@ -172,7 +172,7 @@ namespace OLED {
     }
 
     /**
-     * 
+     * 按键传感器
      * 
      */
 	//% block="square $x"
