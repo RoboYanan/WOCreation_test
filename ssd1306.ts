@@ -899,7 +899,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=75
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function getNTC(pin: AnalogPin): number {
         return _getNTC(readAnalog(pin));
     }
