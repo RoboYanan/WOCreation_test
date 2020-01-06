@@ -1,20 +1,26 @@
 {
-    "name": "WOCreation_bit",
-    "version": "0.0.0",
-    "description": "WOCreation_bit Expansion Board for Microbit",
+    "name": "SSD1306_OLED",
+    "version": "1.1.0",
+    "description": "SSD1306 OLED液晶micro:bit pxt扩展包",
+    "license": "MIT",
     "dependencies": {
-        "core": "*",
-        "radio": "*"
+        "core": "*"
     },
     "files": [
         "README.md",
-        "WOCreation_bit.blocks",
-        "WOCreation_bit.ts"
+        "ssd1306.ts",
+        "SSD1306_OLED.cpp",
+        "Adafruit_SSD1306.h",
+        "Adafruit_SSD1306.cpp",
+        "Adafruit_GFX.h",
+        "Adafruit_GFX.cpp",
+        "Adafruit_GFX_Config.h",
+        "glcdfont.h",
+        "enums.d.ts",
+        "_locales/zh/SSD1306_OLED-strings.json"
     ],
     "testFiles": [
-        "test.ts"
+        "tests.ts"
     ],
-    "public": true,
-    "preferredEditor": "blocksprj",
-    "license": "MIT"
+    "public": true
 }
