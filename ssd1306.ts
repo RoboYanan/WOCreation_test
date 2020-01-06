@@ -173,8 +173,8 @@ namespace OLED {
     }
 	
 	
-    // List of Actuator for the Sensor blocks to use. 
-	// List of Actuator for the OLED blocks to use. 
+    // List of Sensor for the Sensor blocks to use. 
+	// List of OLED显示器 for the OLED blocks显示器 to use. 
     /**
      * 按键传感器
      * 
