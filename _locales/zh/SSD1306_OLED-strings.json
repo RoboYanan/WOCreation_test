@@ -64,7 +64,6 @@
 	"OLED.writeAnalog|block": "设置引脚|%pin|模拟值为|%value", 
 	"OLED.writeDigital|block": "设置引脚|%pin|数字值为|%value", 
 	"OLED.writeExtIO|block": "设置I2C扩展引脚|%pin|值为|%value", 
-	"OLED|block": "Blue:bit传感器",
 	"extendIO.P0|block": "P0",
 	"extendIO.P1|block": "P1",
 	"extendIO.P2|block": "P2",

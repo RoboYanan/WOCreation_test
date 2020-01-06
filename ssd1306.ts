@@ -175,10 +175,13 @@ namespace OLED {
      * 
      * 
      */
+	//% block="square $x"
     //% blockId=Button_Press block="ButtonPress by|%pin"
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=90
     //% blockGap=15
+
+	
     export function ButtonPress(pin: DigitalPin): number {
         if (!INITPIN) {
             init_pin();
