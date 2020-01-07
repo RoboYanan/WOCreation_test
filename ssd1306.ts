@@ -173,8 +173,8 @@ namespace OLED {
     }
 	
 	
-    // List of Sensor for the Sensor blocks to use. 
-	// List of OLED显示器 for the OLED blocks显示器 to use. 
+    // List of Sensor传感器 for the Sensor显示器 blocks to use. 
+	// List of OLED显示器 for the OLED显示器 blocks to use. 
     /**
      * 按键传感器
      * 
@@ -213,7 +213,7 @@ namespace OLED {
     }
 
     /**
-     * 
+     * 红外接近传感器
      * 
      */
     //% blockId=infrared_is_triggered block="Triggered the infrared proximity sensor by|%pin"
@@ -247,7 +247,7 @@ namespace OLED {
     }
 
 	/**
-     * 
+     * 声音传感器
      * 
      */
     //% blockId=sound_is_triggered block="sound sensor is triggered in|%pin"
@@ -281,7 +281,7 @@ namespace OLED {
     }
 
 	/**
-     * 
+     * 红外循迹数字模块
      * 
      */
     //% blockId=Track_is_Dark block="Track sensor detected black in|%pin"
@@ -315,7 +315,7 @@ namespace OLED {
     }
 
 	/**
-     * 
+     * 震动传感器模块
      * 
      */
     //% blockId=shockSensor_is_Triggered block="Shock Sensor is triggered in|%pin"
@@ -349,7 +349,7 @@ namespace OLED {
     }
 
 	/**
-     * 
+     * 射频卡数字模块
      * 
      */
     //% blockId=get_Rfid block="Get the Rfid in|%pin"
@@ -383,7 +383,7 @@ namespace OLED {
     }
 
 	/**
-     * 
+     * 指纹数字模块
      * 
      */
     //% blockId=finger_Print block="Fingerprint verification passed in|%pin"
@@ -417,7 +417,7 @@ namespace OLED {
     }
 
 	/**
-     * 
+     * 人体探测模块
      * 
      */
     //% blockId=Human_Infrared block="Human Infrared sensor is triggered in|%pin"
@@ -451,7 +451,7 @@ namespace OLED {
     }
 
 	/**
-     * 
+     * 门磁（磁力）传感器
      * 
      */
     //% blockId=magnetic_Switch block="Magnetic switch is triggered in|%pin"
@@ -488,7 +488,8 @@ namespace OLED {
 
 
     /**
-     * @param pin , eg: P0
+     * USB开关，开为1、关为0
+	 * @param pin , eg: P0
      * @param value , eg: 1
      */
     //% blockId=usbSwitch block="In|%pin|USB switch ON_OFF|%value"
@@ -512,7 +513,8 @@ namespace OLED {
     }
 
     /**
-     * @param pin , eg: P0
+     * 风扇开关，开为1、关为0
+	 * @param pin , eg: P0
      * @param value , eg: 1
      */
     //% blockId=FanSwitch block="In|%pin|Fan switch ON_OFF|%value"
@@ -536,7 +538,8 @@ namespace OLED {
     }
 
     /**
-        * @param pin , eg: P0
+        * 激光数字开关，开为1、关为0
+		* @param pin , eg: P0
         * @param index , eg: ComMon.ON
         */
     //% blockId=LaserSwitch block="In|%pin|Laser ON_OFF|%value"
