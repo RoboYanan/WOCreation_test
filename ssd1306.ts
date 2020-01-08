@@ -133,7 +133,7 @@ enum oledFont {
 
 //% icon="\uf26c"
 //% color="255" weight="90" block="OLED"
-//% groups="['Sensor传感器', 'OLED显示器']"
+//% groups="['Sensor', 'OLED显示器']"
 
 namespace OLED {
 
@@ -185,7 +185,7 @@ namespace OLED {
     //% weight=100
     //% blockGap=15
 	//% color=160
-	//% group="Sensor传感器"
+	//% group="Sensor"
 	
     export function ButtonPress(pin: DigitalPin): boolean {
         if (!INITPIN) {
@@ -221,7 +221,7 @@ namespace OLED {
     //% weight=98
     //% blockGap=15
 	//% color=160
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function infraredIsTriggered(pin: DigitalPin): boolean{
         if (!INITPIN) {
             init_pin();
@@ -255,7 +255,7 @@ namespace OLED {
     //% weight=98
     //% blockGap=15
 	//% color=160
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function soundIsTriggered(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
@@ -289,7 +289,7 @@ namespace OLED {
     //% weight=97
     //% blockGap=15
 	//% color=160
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function TrackIsDark(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
@@ -323,7 +323,7 @@ namespace OLED {
     //% weight=96
     //% blockGap=15
 	//% color=160
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function shockSensor(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
@@ -357,7 +357,7 @@ namespace OLED {
     //% weight=95
     //% blockGap=15
 	//% color=160
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function getRfid(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
@@ -391,7 +391,7 @@ namespace OLED {
     //% weight=94
     //% blockGap=15
 	//% color=160
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function fingerPrint(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
@@ -425,7 +425,7 @@ namespace OLED {
     //% weight=93
     //% blockGap=15
 	//% color=160
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function HumanInfrared(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
@@ -459,7 +459,7 @@ namespace OLED {
     //% weight=92
     //% blockGap=15
 	//% color=160
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function magneticSwitch(pin: DigitalPin): boolean {
         if (!INITPIN) {
             init_pin();
@@ -496,7 +496,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=91
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function usbSwitch(pin: DigitalPin, value: number): void {
         if (!INITPIN) {
             init_pin();
@@ -520,7 +520,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=90
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function FanSwitch(pin: DigitalPin, value: number): void {
         if (!INITPIN) {
             init_pin();
@@ -544,7 +544,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=89
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function LaserSwitch(pin: DigitalPin, value: number): void {
         if (!INITPIN) {
             init_pin();
@@ -571,7 +571,7 @@ namespace OLED {
     //% play.fieldEditor="gridpicker" play.fieldOptions.columns=3 play.fieldOptions.width="300" 
     //% weight=88
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function Rec_or_Play(status: Rec_Play, rec: DigitalPin, play: DigitalPin): void {
         //import { writeDigital } from "./WOCreation";
 
@@ -600,7 +600,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=87
     //% blockGap=40
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function LEDbrightness(pin: AnalogPin, value: number): void {
         if (!INITPIN) {
             init_pin();
@@ -629,7 +629,7 @@ namespace OLED {
     //% ain2.fieldEditor="gridpicker" ain2.fieldOptions.columns=3 ain2.fieldOptions.width="300" 
     //% weight=86
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function Motor_on_off(status: motor_status, speed: number, ain1: AnalogPin, ain2: AnalogPin): void {
         if (status == 2) {                          //停止
             pins.analogWritePin(ain1, 1);
@@ -654,7 +654,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=85
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function water_level(pin: AnalogPin): number {
         if (!INITPIN) {
             init_pin();
@@ -677,7 +677,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=84
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function Rotational_sensors(pin: AnalogPin): number {
         if (!INITPIN) {
             init_pin();
@@ -699,7 +699,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=83
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function sound_sensors(pin: AnalogPin): number {
         if (!INITPIN) {
             init_pin();
@@ -721,7 +721,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=82
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function soil_moisture_sensor(pin: AnalogPin): number {
         if (!INITPIN) {
             init_pin();
@@ -743,7 +743,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=81
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function Analog_ray_sensor(pin: AnalogPin): number {
         if (!INITPIN) {
             init_pin();
@@ -770,7 +770,7 @@ namespace OLED {
     //% A1.fieldEditor="gridpicker" A1.fieldOptions.columns=3 A1.fieldOptions.width="300" 
     //% weight=80
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function Rocker_sensor(axis: Rocker_axis, A0: AnalogPin, A1: AnalogPin): void {
 
         if (axis == 0) {                          //摇杆传感器X轴
@@ -790,7 +790,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=79
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function readDigital(pin: DigitalPin): number {
         if (!INITPIN) {
             init_pin();
@@ -816,7 +816,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=78
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function writeDigital(pin: DigitalPin, value: number): void {
         if (!INITPIN) {
             init_pin();
@@ -842,7 +842,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=77
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function readAnalog(pin: AnalogPin): number {
         if (!INITPIN) {
             init_pin();
@@ -868,7 +868,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=76
     //% blockGap=40
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function writeAnalog(pin: AnalogPin, value: number): void {
         if (!INITPIN) {
             init_pin();
@@ -885,7 +885,7 @@ namespace OLED {
 
 
     //% shim=WOCreation::_getNTC
-	//% group="Sensor传感器"
+	//% group="Sensor"
     function _getNTC(value: number) {
         // Dummy implementation for the simulator.
         return 0;
@@ -899,7 +899,7 @@ namespace OLED {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4 pin.fieldOptions.width="300" 
     //% weight=75
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function getNTC(pin: AnalogPin): number {
         return _getNTC(readAnalog(pin));
     }
@@ -914,7 +914,7 @@ namespace OLED {
     //% button.fieldEditor="gridpicker" button.fieldOptions.width=300  button.fieldOptions.columns=2
     //% weight=74
     //% blockGap=15
-	//% group="Sensor传感器"
+	//% group="Sensor"
     export function joyButtonVal(button: joyButton, pin: AnalogPin): boolean {
         if (!INITPIN) {
             init_pin();
