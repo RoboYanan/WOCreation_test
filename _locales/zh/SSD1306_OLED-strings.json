@@ -18,7 +18,6 @@
 	"Scroll.right|block": "右",
 	"Rec_Play.rec|block": "录音",
 	"Rec_Play.play|block": "播放",
-	"OLED.ButtonPress|block": "按键传感器 引脚|%pin|被按下",
 	"OLED.infraredIsTriggered|block": "红外接近传感器 引脚|%pin|被触发",
 	"OLED.soundIsTriggered|block": "声音传感器 引脚|%pin|被触发",
 	"OLED.TrackIsDark|block": "循迹传感器 引脚|%pin|检测为黑",
