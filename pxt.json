@@ -1,7 +1,7 @@
 {
     "name": "SD1306_OLED",
     "version": "1.1.0",
-    "description": "WOCreation micro:bit pxt扩展包",
+    "description": "SSD1306 OLED液晶micro:bit pxt扩展包",
     "license": "MIT",
     "dependencies": {
         "core": "*"
