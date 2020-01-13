@@ -256,19 +256,6 @@ namespace WOCreation_Actuator {
             stopMotor(idx);
         }
     }
-    /**
-     * Notice:Install the buzzer jump cap before use !
-     * buzzer Emits a Pulse-width modulation (PWM) signal to the  pin0. More advanced application,can use music module.
-     * @param frequency frequency to modulate in Hz. eg:1000
-     * @param ms duration of the pitch in milli seconds.     eg:1000
-     */
-    //% blockId=buzzer_pitch block="buzzer pitch %frequency|for (ms) %ms"
-    //% weight=60  blockGap=15
-    export function BuzzerPitch(frequency: number, ms: number): void {
-
-        pins.analogSetPitchPin(AnalogPin.P0);
-        pins.analogPitch(frequency, ms);
-    }
 
 
 }
