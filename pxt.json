@@ -1,0 +1,21 @@
+{
+    "name": "WOCreation_Actuator",
+    "version": "0.0.0",
+    "description": "WOCreation_Actuator: extended port for drive motor and steering gear",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "README.md",
+        "WOCreation_Actuator.blocks",
+		"_locales/zh/WOCreation_Actuator-strings.json",
+        "WOCreation_Actuator.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "preferredEditor": "blocksprj",
+    "license": "MIT"
+}

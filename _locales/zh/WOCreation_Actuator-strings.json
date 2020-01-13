@@ -1,0 +1,10 @@
+{
+  "WOCreation_Actuator|block": "YOU创板驱动模块",
+  "WOCreation_Actuator": "YOU创板驱动模块",
+  "WOCreation_Actuator.MotorRun|block": "电机|%index|转速 %speed",
+  "WOCreation_Actuator.MotorStopAll|block": "停止全部电机",
+  "WOCreation_Actuator.MotorStop|block": "电机|%index|停止",
+  "WOCreation_Actuator.Servo|block": "舵机|%index|角度 %degree",
+  "WOCreation_Actuator.StepperDegree|block": "步进电机|%index|转速 %degree"
+}
+
