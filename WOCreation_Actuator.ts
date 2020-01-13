@@ -170,7 +170,7 @@ namespace WOCreation_Actuator {
 
 
 	/**
-	 * S1-S4 Servo Execute,0-180 degree
+	 * S1-S8 Servo Execute,0-180 degree
 	 * @param index Servo Channel; eg: S1
 	 * @param degree [0-180] degree of servo; eg: 0,90,180
 	*/
@@ -178,7 +178,7 @@ namespace WOCreation_Actuator {
     //% weight=70
     //% blockGap=35
     //% degree.min=0 degree.max=180
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=8
     export function Servo(index: Servos, degree: number): void {
         if (!initialized) {
             initPCA9685()
@@ -199,7 +199,7 @@ namespace WOCreation_Actuator {
     //% weight=88
     //% blockGap=15
     //% speed.min=-255 speed.max=255
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=8
     export function MotorRun(index: Motors, speed: number): void {
         if (!initialized) {
             initPCA9685()
